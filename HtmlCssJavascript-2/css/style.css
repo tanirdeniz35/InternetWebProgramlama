@@ -1,0 +1,31 @@
+.box-1 {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(69, 42, 133);
+}
+.box-1:hover {
+  background-color: rgb(101, 81, 148);
+}
+.box-2 {
+  background-color: rgb(34, 34, 26);
+}
+.navList {
+  color: white;
+  height: 50px;
+}
+
+.navList > li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+  height: 100%;
+  align-content: center;
+}
+.navList > li:hover {
+  cursor: pointer;
+  background-color: rgb(70, 70, 57);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}

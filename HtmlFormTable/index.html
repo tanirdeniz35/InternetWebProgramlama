@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="iletisim.php" method="get">
+        <fieldset>Kullanıcı Kayıt Formu</fieldset>
+        <table border="1" style="background-color: rgb(42, 165, 79);width: 100%;">
+
+            <tbody>
+                <tr>
+                    <td>Ad Soyad</td>
+                    <td><input type="text" name="adSoyad"></td>
+                </tr>
+                <tr>
+                    <td>Eğitim durumu</td>
+                    <td><select name="egitimDurumu">
+                            <optgroup>
+                                <option>İlkokul</option>
+                                <option>Lise</option>
+                                <option>Üniversite</option>
+                            </optgroup>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Mesaj</td>
+                    <td><textarea name="mesaj"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Gönder"></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </form>
+</body>
+
+</html>

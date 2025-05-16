@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import "./App.css";
 import Merhaba2 from "./Merhaba2";
 import Merhaba from "./Merhaba";
+import Dugme from "./components/Dugme";
 function App2() {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -14,7 +15,7 @@ function App2() {
   }, []);
 
   useEffect(() => {
-    console.log("Her render'da çalışır"); // Sayfa ilk yüklendiğinde çalışır
+    console.log("Her render'da çalışır"); // Her render'da çalışır
   });
 
   useEffect(() => {
@@ -23,6 +24,13 @@ function App2() {
 
   const YasDegistir = (x) => {
     return x + 10;
+  };
+
+  const arttir = () => {
+    setCount((x) => x + 1);
+  };
+  const azalt = () => {
+    setCount2((x) => x - 1);
   };
 
   return (
@@ -44,12 +52,10 @@ function App2() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <button onClick={() => setCount2((count2) => count2 - 1)}>
-          count is {count2}
-        </button>
+        <Dugme degistirProp={arttir} countState={count}></Dugme>
+
+        <Dugme degistirProp={azalt} countState={count2}></Dugme>
+
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
